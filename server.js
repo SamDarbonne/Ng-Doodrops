@@ -8,7 +8,7 @@ var db = require('./models');
 
 //static files
 app.use(express.static(__dirname + '/public'));
-
+app.use('/vendor', express.static(__dirname + '/bower_components'))
 //gotta grab our controllers or nothing in here will work
 var controllers = require('./controllers');
 

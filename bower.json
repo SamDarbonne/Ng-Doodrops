@@ -1,0 +1,28 @@
+{
+  "name": "ng-Doodrops",
+  "description": "Dog Poo Receptacle List V2 Angular.js Frontend",
+  "main": "server.js",
+  "authors": [
+    "samdarbonne <samdarbonne@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "doodrops",
+    "dog",
+    "poo"
+  ],
+  "homepage": "https://github.com/SamDarbonne/Ng-Doodrops",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bower-angularjs": "angular.js#^1.3.15",
+    "angular-google-maps": "^2.4.0",
+    "ngmap": "^1.17.6"
+  }
+}

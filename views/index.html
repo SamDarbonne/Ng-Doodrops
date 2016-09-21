@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ngdrops">
 <head>
 	<meta charset="UTF-8">
 	<title>Ng-Doodrops</title>
+	<!-- <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+	<script src='/vendor/lodash/lodash.js'></script> -->
+	<script src='/vendor/angular/angular.js'></script>
+	<!-- <script src='/vendor/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
+	<script src='/vendor/angular-google-maps/dist/angular-google-maps.min.js'></script> -->
 	<script src="scripts/app.js"></script>
+	<link type="text/css" rel="stylesheet" href="/styles/main.css">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places"></script>
+	<script src="/vendor/ngmap/build/scripts/ng-map.min.js"></script>
+
+	<script src="https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.js"></script>
+</head>
 </head>
 <body>
 	<h1>Ng-Doodrops</h1>
+	<br>
+	  <ng-map center="-25.363882,131.044922" zoom="4">
+    <marker position="-25.363882,131.044922" title="Hello World!"></marker>
+  </ng-map>
 </body>
 </html>
