@@ -1,0 +1,35 @@
+ng-map {
+	width: 50vw;
+	height: 90vh;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+header {
+	height: 10vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #00cc66;
+	display: inline-block;
+	width: 100vw;
+}
+#cardlist {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 88vh;
+	overflow-y: scroll;
+	clear: after;
+	padding: 5px;
+}
+.card {
+	border: 1px solid #009944;
+	width: 49vw;
+	border-radius: 3px;
+	margin-top: 5px;
+
+}
+#title {
+	height: 100;
+}
