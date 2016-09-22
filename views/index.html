@@ -40,7 +40,11 @@
       </div>
   </script>
     <header>
-        Ng-Doodrops
+        Ng-Doodrops <input id="autocomplete" places-auto-complete size=80
+    ng-model="vm.address"
+    component-restrictions="{country:'us'}"
+    types="{{types}}"
+    on-place-changed="vm.placeChanged()" />
     </header>
     <br>
     <div ng-controller="dropListGetController as dropsCtrl">

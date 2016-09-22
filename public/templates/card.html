@@ -2,10 +2,35 @@
 	
 	<a ng-href="localhost:3000"><button class="btn" ng-click="dropCtrl.go('/')"> back </button></a>
 	<div class="show-card">
-		<h1>{{dropCtrl.drop.type}}</h1>
-		<h3>{{dropCtrl.drop.address}}</h3>
-		<h3>{{dropCtrl.drop.cityName}}</h3>
+		<h1>
+			<span  ng-hide="editing">{{dropCtrl.drop.type}}</span>
+			<div ng-show="editing">
+				<label>Type:</label>
+				<input ng-model="dropCtrl.drop.type">
+			</div>
+		</h1>
+		
+		<h3>
+			<span ng-hide="editing">{{dropCtrl.drop.address}}</span>
+			<div ng-show="editing">
+				<label>Address:</label>
+				<input ng-model="dropCtrl.drop.address">
+			</div>
+		</h3>
+		
+		<h3>
+			<span ng-hide="editing">{{dropCtrl.drop.cityName}}</span>
+			<div ng-show="editing">
+				<label>City:</label>
+				<input ng-model="dropCtrl.drop.cityName">
+			</div>
+		</h3>
+		<button class="btn" ng-click="editing = true" ng-hide="editing">edit</button>
+		<button class="btn" ng-click="editing = false; dropCtrl.save()" ng-show="editing">save</button>
 
+	</div>
+	<div class="show-card" ng-repeat="comment in dropCtrl.drop.comments">
+	{{comment.commenterName}}: {{comment.commentContent}}
 	</div>
   
 </div>
