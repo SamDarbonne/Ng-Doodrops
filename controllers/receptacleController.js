@@ -49,12 +49,14 @@ function show(req, res) {
 // UPDATE /api/receptacles/:binId
 function update(req, res) {
   binId = req.params.id;
+  console.log('body', req.body)
   db.Receptacle.findById(req.params.binId, function(err, foundReceptacle) {
     if(err) { 
       console.log('receptaclesController.update error', err); 
     }
     console.log('found receptacle: ' + foundReceptacle);
     foundReceptacle.type = req.body.type;
+    foundReceptacle.address = req.body.address;
     foundReceptacle.save(function(err, savedReceptacle) {
       if(err) { 
         console.log('updating receptacle failed');
