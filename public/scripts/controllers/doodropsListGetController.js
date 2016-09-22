@@ -1,8 +1,8 @@
 console.log('doodrop get list controller connected')
 angular.module('ngdrops')
   .controller('dropListGetController', dropListGetController);
-dropListGetController.inject = ['$http'];
-function dropListGetController($http){
+dropListGetController.inject = ['$http', '$routeParams'];
+function dropListGetController($http, $routeParams){
   var vm = this;
   vm.getDrops = getDrops;
 
@@ -15,7 +15,6 @@ function dropListGetController($http){
   }
 
   function getSuccess(response) {
-    console.log(response.data)
     vm.dropList=response.data;
     console.log(vm.dropList);
   }

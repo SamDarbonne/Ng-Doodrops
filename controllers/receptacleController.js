@@ -37,7 +37,16 @@ function create(req, res) {
 	newBin.save();
 	res.json(newBin);
 }
-
+// GET /api/receptacles/:binId
+function show(req, res) {
+  db.Receptacle.findById(req.params.binId, function(err, foundReceptacle) {
+    if(err) {
+      console.log('receptaclesController.show error', err);
+    }
+    console.log('found receptacle: ' + foundReceptacle);
+    res.json(foundReceptacle)
+  })
+}
 // UPDATE /api/receptacles/:binId
 function update(req, res) {
   binId = req.params.id;
@@ -70,5 +79,6 @@ module.exports = {
   create: create,
   destroy: destroy,
   update: update,
-  gps: gps
+  gps: gps,
+  show: show
 }

@@ -27,6 +27,8 @@ app.get('/api/receptacles', controllers.receptacles.index);
 //post new receptacle
 app.post('/api/receptacles', controllers.receptacles.create);
 
+//get receptacle by id
+app.get('/api/receptacles/:binId', controllers.receptacles.show);
 
 //update receptacle by id
 app.put('/api/receptacles/:binId', controllers.receptacles.update);

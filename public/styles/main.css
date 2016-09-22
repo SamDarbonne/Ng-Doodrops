@@ -5,6 +5,12 @@ ng-map {
 	bottom: 0;
 	left: 0;
 }
+.show-card {
+	text-align: center;
+}
+h1 {
+	text-align: center;
+}
 header {
 	height: 10vh;
 	position: absolute;

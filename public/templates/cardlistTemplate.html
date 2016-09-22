@@ -1,0 +1,5 @@
+<div id="cardlist" class="clearfix">
+    <div ng-repeat="drop in dropsCtrl.dropList | orderBy: '_id'">
+        <doo-drop doodrop="drop"></doo-drop>
+    </div>
+</div>
