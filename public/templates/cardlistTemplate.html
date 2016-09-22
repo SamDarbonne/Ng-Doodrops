@@ -1,5 +1,5 @@
 <div id="cardlist" class="clearfix">
     <div ng-repeat="drop in dropsCtrl.dropList | orderBy: '_id'">
-        <doo-drop doodrop="drop"></doo-drop>
+        <doo-drop doodrop="drop" ng-click="dropsCtrl.go('/drops/' + drop._id)"></doo-drop>
     </div>
 </div>

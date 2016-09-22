@@ -1,8 +1,8 @@
 console.log('doodrop get list controller connected')
 angular.module('ngdrops')
   .controller('dropListGetController', dropListGetController);
-dropListGetController.inject = ['$http', '$routeParams'];
-function dropListGetController($http, $routeParams){
+dropListGetController.inject = ['$http', '$routeParams', '$location'];
+function dropListGetController($http, $routeParams, $location){
   var vm = this;
   vm.getDrops = getDrops;
 
@@ -12,6 +12,11 @@ function dropListGetController($http, $routeParams){
       method: 'GET',
       url: '/api/receptacles'
     }).then(getSuccess, onError)
+  }
+
+  vm.go = function (url) {
+      console.log('clicked')
+      $location.path(url);
   }
 
   function getSuccess(response) {

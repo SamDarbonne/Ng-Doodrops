@@ -1,8 +1,8 @@
 console.log('doodrop show controller connected')
 angular.module('ngdrops')
   .controller('dropController', dropController);
-dropController.inject = ['$http', '$routeParams'];
-function dropController($http, $routeParams){
+dropController.inject = ['$http', '$routeParams', '$location'];
+function dropController($http, $routeParams, $location){
   var vm = this;
   vm.getDrop = getDrop;
   var dropId = $routeParams.dropId
@@ -14,6 +14,10 @@ function dropController($http, $routeParams){
     }).then(getSuccess, onError)
   }
 
+  vm.go = function (url) {
+      console.log('clicked')
+      $location.path(url);
+  }
   function getSuccess(response) {
     vm.drop=response.data;
     console.log(vm.drop);

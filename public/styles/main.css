@@ -5,6 +5,13 @@ ng-map {
 	bottom: 0;
 	left: 0;
 }
+.btn {
+	background-color: #00cc66;
+	border: none;
+	height: 10vh;
+	font-size: 8vh;
+	color: #009944;
+}
 .show-card {
 	text-align: center;
 	display: block;
