@@ -24,10 +24,13 @@ function config(   $routeProvider,   $locationProvider   ) {
       templateUrl: '/templates/card.html',
       controller: 'dropController',
       controllerAs: 'dropCtrl'
+    }).otherwise({
+    	redirectTo: '/'
     });
     $locationProvider.html5Mode({
     enabled: true,
-    requireBase: false
+    requireBase: false,
+    rewriteLinks: true
   });
 };
 

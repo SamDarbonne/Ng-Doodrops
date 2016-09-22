@@ -54,6 +54,9 @@ app.post('/api/receptacles/:binId/comments', controllers.comments.create);
 //delete comment by comment id
 app.delete('/api/receptacles/:binId/comments/:commentId', controllers.comments.destroy);
 
+app.get('*', function(req, res) {
+	res.redirect('/');
+})
 
 ///////////////
 // SERVERY   //
