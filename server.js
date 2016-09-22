@@ -5,6 +5,7 @@ var app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 var db = require('./models');
+app.use(bodyParser.json())
 
 //static files
 app.use(express.static(__dirname + '/public'));
