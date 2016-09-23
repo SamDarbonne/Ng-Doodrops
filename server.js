@@ -40,17 +40,8 @@ app.delete('/api/receptacles/:binId', controllers.receptacles.destroy);
 //get list of receptacle locations (lat, lon)
 app.get('/api/receptacles/gps', controllers.receptacles.gps);
 
-
-//get comments for receptacle by receptacle id
-//app.get('/api/receptacles/:binId/comments', controllers.comments.index);
-//unneeded 
-
-
 //add comment to receptacle by receptacle id
 app.post('/api/receptacles/:binId/comments', controllers.comments.create);
-
-//update comment to receptacle by comment id (unneccessary?) yes, unneccessary
-
 
 //delete comment by comment id
 app.delete('/api/receptacles/:binId/comments/:commentId', controllers.comments.destroy);

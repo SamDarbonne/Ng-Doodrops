@@ -1,1 +1,2 @@
 #Ng-Doodrops
+I set up a custom directive for each data card displaying a database document. That was probably overkill and I could have done a lot of other work in the time it took to put that together. my views using ng-route are working really well and that, I think, was definitely worth the effort. I had some issues with passing data between different directives, so I was unable to get autocomplete to work well with the map, and I was unable to get the markers to highlight when the mouse was hovering over a doodrop directive in the list view.

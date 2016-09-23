@@ -27,48 +27,4 @@ function dropListGetController($http, $routeParams, $location){
     console.log('error, ', response)
   }
   vm.getDrops();
-  // vm.dropList = [
-  //   { 
-  //     name: 'General Assembly Doodrop', 
-  //     address: '225 Bush st.', 
-  //     city: 'san francisco',
-  //     _id: 1
-  //   },
-  //   {
-  //     name: 'Another Doodrop', 
-  //     address: 'Somewhere else', 
-  //     city: 'san francisco',
-  //     _id: 2
-  //   },
-  //   {
-  //     name: 'Third Doodrop', 
-  //     address: 'Somewhere else', 
-  //     city: 'san francisco',
-  //     _id: 3
-  //   },
-  //   {
-  //     name: 'Fourth Doodrop', 
-  //     address: 'Somewhere else', 
-  //     city: 'san francisco',
-  //     _id: 4
-  //   },
-  //   {
-  //     name: 'Fifth Doodrop', 
-  //     address: 'Somewhere else', 
-  //     city: 'san francisco',
-  //     _id: 7
-  //   },
-  //   {
-  //     name: 'Sixth Doodrop', 
-  //     address: 'Somewhere else', 
-  //     city: 'san francisco',
-  //     _id: 5
-  //   },
-  //   {
-  //     name: 'Another Nother Doodrop', 
-  //     address: 'Somewhere else', 
-  //     city: 'san francisco',
-  //     _id: 6
-  //   },
-  // ]
 }
