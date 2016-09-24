@@ -5,6 +5,7 @@ var db = require("../models");
 
 // GET /api/receptacles
 function index(req, res) {
+  console.log('GET request at /api/receptacles');
   db.Receptacle.find(function(err, receptacles){
     if (err) { 
     	return console.log("index error: " + err); 
@@ -15,6 +16,7 @@ function index(req, res) {
 
 //GET /api/receptacles/gps
 function gps(req, res) {
+  console.log('GET request at /api/receptacles/gps');
   db.Receptacle.find(function(err, receptacles) {
     if (err) {
       return console.log('error with gps controller: ' + err);
@@ -32,12 +34,14 @@ function gps(req, res) {
 }
 // POST /api/receptacles
 function create(req, res) {
+  console.log('POST request at /api/receptacles')
 	newBin = new db.Receptacle(req.body);
 	newBin.save();
 	res.json(newBin);
 }
 // GET /api/receptacles/:binId
 function show(req, res) {
+  console.log('GET request at /api/receptacles/' + req.params.binId);
   db.Receptacle.findById(req.params.binId, function(err, foundReceptacle) {
     if(err) {
       console.log('receptaclesController.show error', err);
@@ -48,6 +52,7 @@ function show(req, res) {
 }
 // UPDATE /api/receptacles/:binId
 function update(req, res) {
+  console.log('PUT request at /api/receptacles/' + req.params.id)
   binId = req.params.id;
   console.log('body', req.body)
   db.Receptacle.findById(req.params.binId, function(err, foundReceptacle) {
