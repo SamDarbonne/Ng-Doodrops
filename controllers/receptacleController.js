@@ -58,7 +58,6 @@ function update(req, res) {
     if(err) { 
       console.log('receptaclesController.update error', err); 
     }
-    console.log('found receptacle: ' + foundReceptacle);
     foundReceptacle.type = req.body.type;
     foundReceptacle.address = req.body.address;
     foundReceptacle.save(function(err, savedReceptacle) {
