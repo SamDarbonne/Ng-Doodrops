@@ -52,8 +52,7 @@ function show(req, res) {
 }
 // UPDATE /api/receptacles/:binId
 function update(req, res) {
-  console.log('PUT request at /api/receptacles/' + req.params.id)
-  binId = req.params.id;
+  console.log('PUT request at /api/receptacles/' + req.params.binId)
   db.Receptacle.findById(req.params.binId, function(err, foundReceptacle) {
     if(err) { 
       console.log('receptaclesController.update error', err); 
