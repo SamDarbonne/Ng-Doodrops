@@ -46,7 +46,7 @@ function show(req, res) {
     if(err) {
       console.log('receptaclesController.show error', err);
     }
-    console.log('found receptacle: ' + foundReceptacle);
+    console.log('found receptacle');
     res.json(foundReceptacle)
   })
 }
@@ -54,7 +54,6 @@ function show(req, res) {
 function update(req, res) {
   console.log('PUT request at /api/receptacles/' + req.params.id)
   binId = req.params.id;
-  console.log('body', req.body)
   db.Receptacle.findById(req.params.binId, function(err, foundReceptacle) {
     if(err) { 
       console.log('receptaclesController.update error', err); 
