@@ -6,8 +6,15 @@ dropController.inject = ['$http', '$routeParams', '$location'];
 function dropController($http, $routeParams, $location) {
     var vm = this;
     vm.getDrop = getDrop;
-    var dropId = $routeParams.dropId
+    var dropId = $routeParams.dropId;
+    vm.deleteDrop = deleteDrop;
 
+    function deleteDrop() {
+        $http({
+            method: 'DELETE',
+            url: '/api/receptacles/' + dropId
+        }).then(deleteSuccess, onError)
+    }
     function getDrop() {
         $http({
             method: 'GET',
@@ -32,6 +39,11 @@ function dropController($http, $routeParams, $location) {
     vm.go = function(url) {
         console.log('clicked')
         $location.path(url);
+    }
+
+    function deleteSuccess(response) {
+        console.log('deleted: ', response);
+        $location.path('/')
     }
 
     function saveSuccess(response) {
