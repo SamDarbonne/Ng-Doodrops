@@ -25,16 +25,16 @@
 				<input ng-model="dropCtrl.drop.cityName">
 			</div>
 		</h3>
-		<button class="btn" ng-click="editing = true" ng-hide="deleting">edit</button>
-		<button class="btn" ng-click="editing = false; dropCtrl.save()" ng-hide="deleting" ng-show="editing">save</button>
-		<button class="btn" ng-click="deleting = true" ng-hide="deleting">delete</button>
+		<button class="btn" ng-click="editing = true" ng-hide="deleting || editing">edit</button>
+		<button class="btn" ng-click="editing = false; dropCtrl.save()" ng-show="editing">save</button>
+		<button class="btn" ng-click="deleting = true" ng-hide="deleting || editing">delete</button>
 		<p ng-show="deleting">Really delete this {{dropCtrl.drop.type}}?</p>
 		<button class="btn" ng-click="dropCtrl.deleteDrop()" ng-show="deleting">yes</button>
 		<button class="btn" ng-click="deleting = false" ng-show="deleting">no</button>
 
 	</div>
-	<div class="show-card" ng-repeat="comment in dropCtrl.drop.comments">
-	{{comment.commenterName}}: {{comment.commentContent}}
+	<div class="show-card comment" ng-repeat="comment in dropCtrl.drop.comments">
+	<span class="italic">{{comment.commenterName}} - {{comment.commentContent}}</span>
 	</div>
   
 </div>

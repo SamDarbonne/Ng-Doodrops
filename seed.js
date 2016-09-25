@@ -33,10 +33,41 @@ receptaclesList = [
 					},
 					{
 						address: '1776 Constitution Way',
-						cityName: 'Washington D.C.',
+						cityName: 'San Francisco',
 						type: 'Doggy Station',
 						lat: 37.7522655,
 						lon: -122.4209411
+					},
+					{
+						address: 'Dolores Park',
+						cityName: 'San Francisco',
+						type: 'Garbage Can',
+						lat: 37.47598,
+						lon: -122.4271,
+						comments: [
+							{commenterName: 'Janie W.', commentContent: "There are so many garbage cans here, and it's a very dog friendly park!"}
+						]
+					},
+					{
+						address: 'Corner of 12th and Lexington',
+						cityName: 'San Francisco',
+						type: 'Garbage Can',
+						lat: 37.5151376,
+						lon: -122.41909411
+					},
+					{
+						address: '1920 Picadilly Lane',
+						cityName: 'San Francisco',
+						type: 'Doggy Station',
+						lat: 37.9298394,
+						lon: -122.3220037
+					},
+					{
+						address: '220 19th st.',
+						cityName: 'San Francisco',
+						type: 'Garbage Can',
+						lat: 37.9622655,
+						lon: -122.419909411
 					},
 					{
 						address: '333 Mission St.',
