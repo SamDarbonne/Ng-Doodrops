@@ -65,6 +65,14 @@ li {
     padding-bottom: 10px;
 }
 
+.comment {
+	text-align: center;
+	display: block;
+	width: 49vw;
+	margin-top: 5px;
+	padding-bottom: 10px;
+}
+
 h1 {
     text-align: center;
     color: #009944;

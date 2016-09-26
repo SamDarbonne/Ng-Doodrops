@@ -5,10 +5,10 @@ var db = require("../models");
 
 // GET /api/receptacles
 function index(req, res) {
-  console.log('GET request at /api/receptacles');
+  // console.log('GET request at /api/receptacles');
   db.Receptacle.find(function(err, receptacles){
     if (err) { 
-    	return console.log("index error: " + err); 
+    	// return console.log("index error: " + err); 
     }
     res.json(receptacles);
   });
@@ -16,10 +16,10 @@ function index(req, res) {
 
 //GET /api/receptacles/gps
 function gps(req, res) {
-  console.log('GET request at /api/receptacles/gps');
+  // console.log('GET request at /api/receptacles/gps');
   db.Receptacle.find(function(err, receptacles) {
     if (err) {
-      return console.log('error with gps controller: ' + err);
+      // return console.log('error with gps controller: ' + err);
     }
     var responseList = [];
     receptacles.forEach(function(element, index, array) {
@@ -34,34 +34,34 @@ function gps(req, res) {
 }
 // POST /api/receptacles
 function create(req, res) {
-  console.log('POST request at /api/receptacles')
+  // console.log('POST request at /api/receptacles')
 	newBin = new db.Receptacle(req.body);
 	newBin.save();
 	res.json(newBin);
 }
 // GET /api/receptacles/:binId
 function show(req, res) {
-  console.log('GET request at /api/receptacles/' + req.params.binId);
+  // console.log('GET request at /api/receptacles/' + req.params.binId);
   db.Receptacle.findById(req.params.binId, function(err, foundReceptacle) {
     if(err) {
-      console.log('receptaclesController.show error', err);
+      // console.log('receptaclesController.show error', err);
     }
-    console.log('found receptacle');
+    // console.log('found receptacle');
     res.json(foundReceptacle)
   })
 }
 // UPDATE /api/receptacles/:binId
 function update(req, res) {
-  console.log('PUT request at /api/receptacles/' + req.params.binId)
+  // console.log('PUT request at /api/receptacles/' + req.params.binId)
   db.Receptacle.findById(req.params.binId, function(err, foundReceptacle) {
     if(err) { 
-      console.log('receptaclesController.update error', err); 
+      // console.log('receptaclesController.update error', err); 
     }
     foundReceptacle.type = req.body.type;
     foundReceptacle.address = req.body.address;
     foundReceptacle.save(function(err, savedReceptacle) {
       if(err) { 
-        console.log('updating receptacle failed');
+        // console.log('updating receptacle failed');
       }
       res.json(savedReceptacle);
     });

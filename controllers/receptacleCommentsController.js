@@ -16,10 +16,10 @@ function create(req, res) {
   var receptacleId = req.params.binId;
   var newComment;
   db.Receptacle.findById(req.params.binId, function(err, foundReceptacle) {
-    console.log(req.body);
+    // console.log(req.body);
     foundReceptacle.comments.push(req.body);
     foundReceptacle.save(function(err, savedReceptacle) {
-      console.log('newComment created: ', newComment);
+      // console.log('newComment created: ', newComment);
       res.json('comment created');
     });
   });
